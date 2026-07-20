@@ -1,6 +1,6 @@
 USE vendoriq;
 
--- Users
+--Users
 INSERT INTO users (full_name, email, password, role)
 VALUES
 ('Arjun Mehta', 'arjun@vendoriq.com', 'admin123', 'Admin'),

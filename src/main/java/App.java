@@ -1,5 +1,8 @@
+import util.DBConnection;
+
 public class App {
+
     public static void main(String[] args) {
-        System.out.println("VendorIQ Project Started Successfully!");
+        DBConnection.getConnection();
     }
 }
