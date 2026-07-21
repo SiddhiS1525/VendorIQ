@@ -1,8 +1,13 @@
-import util.DBConnection;
+import ui.LoginUI;
 
 public class App {
 
     public static void main(String[] args) {
-        DBConnection.getConnection();
+
+        LoginUI loginUI = new LoginUI();
+
+        loginUI.login();
+
     }
+
 }
