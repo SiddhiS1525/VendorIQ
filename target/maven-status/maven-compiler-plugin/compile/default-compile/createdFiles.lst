@@ -1,2 +1,9 @@
+ui\VendorUI.class
+dao\VendorDAO.class
+model\Vendor.class
+dao\UserDAO.class
 App.class
+services\LoginService.class
+ui\LoginUI.class
 util\DBConnection.class
+model\User.class
