@@ -1,9 +1,15 @@
 ui\VendorUI.class
+dao\PurchaseOrderDAO.class
+ui\PurchaseOrderUI.class
+model\PurchaseOrder.class
+App.class
+util\DBConnection.class
+ui\ProductUI.class
 dao\VendorDAO.class
 model\Vendor.class
+model\Product.class
 dao\UserDAO.class
-App.class
 services\LoginService.class
 ui\LoginUI.class
-util\DBConnection.class
+dao\ProductDAO.class
 model\User.class
