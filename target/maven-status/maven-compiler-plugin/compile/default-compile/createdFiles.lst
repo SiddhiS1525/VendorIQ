@@ -3,9 +3,12 @@ dao\PurchaseOrderDAO.class
 ui\PurchaseOrderUI.class
 model\PurchaseOrder.class
 App.class
+dao\InvoiceDAO.class
+model\Invoice.class
 util\DBConnection.class
 ui\ProductUI.class
 dao\VendorDAO.class
+ui\InvoiceUI.class
 model\Vendor.class
 model\Product.class
 dao\UserDAO.class

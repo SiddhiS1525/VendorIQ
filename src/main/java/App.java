@@ -1,6 +1,7 @@
 import ui.ProductUI;
 import ui.PurchaseOrderUI;
 import ui.VendorUI;
+import ui.InvoiceUI;
 
 import java.util.Scanner;
 
@@ -13,6 +14,7 @@ public class App {
         VendorUI vendorUI = new VendorUI();
         ProductUI productUI = new ProductUI();
         PurchaseOrderUI purchaseOrderUI = new PurchaseOrderUI();
+        InvoiceUI invoiceUI = new InvoiceUI();
 
         while (true) {
 
@@ -20,6 +22,7 @@ public class App {
             System.out.println("1. Vendor Module");
             System.out.println("2. Product Module");
             System.out.println("3. Purchase Order Module");
+            System.out.println("4. Invoice Module");
             System.out.println("0. Exit");
             System.out.print("Enter Choice : ");
 
@@ -175,6 +178,41 @@ public class App {
                     break;
 
                 // ================= Exit =================
+                case 4:
+
+    while (true) {
+
+        System.out.println("\n====== Invoice Module ======");
+        System.out.println("1. Create Invoice");
+        System.out.println("2. View All Invoices");
+        System.out.println("0. Back");
+        System.out.print("Enter Choice : ");
+
+        int invoiceChoice = sc.nextInt();
+        sc.nextLine();
+
+        switch (invoiceChoice) {
+
+            case 1:
+                invoiceUI.createInvoice();
+                break;
+
+            case 2:
+                invoiceUI.viewInvoices();
+                break;
+
+            case 0:
+                break;
+
+            default:
+                System.out.println("Invalid Choice!");
+        }
+
+        if (invoiceChoice == 0)
+            break;
+    }
+
+    break;
                 case 0:
                     System.out.println("\nThank You for using VendorIQ!");
                     System.exit(0);
