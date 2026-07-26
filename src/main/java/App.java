@@ -2,6 +2,7 @@ import ui.ProductUI;
 import ui.PurchaseOrderUI;
 import ui.VendorUI;
 import ui.InvoiceUI;
+import ui.PaymentUI;
 
 import java.util.Scanner;
 
@@ -15,6 +16,8 @@ public class App {
         ProductUI productUI = new ProductUI();
         PurchaseOrderUI purchaseOrderUI = new PurchaseOrderUI();
         InvoiceUI invoiceUI = new InvoiceUI();
+        PaymentUI paymentUI = new PaymentUI();
+
 
         while (true) {
 
@@ -23,6 +26,7 @@ public class App {
             System.out.println("2. Product Module");
             System.out.println("3. Purchase Order Module");
             System.out.println("4. Invoice Module");
+            System.out.println("5. Payment Module");
             System.out.println("0. Exit");
             System.out.print("Enter Choice : ");
 
@@ -209,6 +213,42 @@ public class App {
         }
 
         if (invoiceChoice == 0)
+            break;
+    }
+
+    break;
+
+    case 5:
+
+    while (true) {
+
+        System.out.println("\n====== Payment Module ======");
+        System.out.println("1. Record Payment");
+        System.out.println("2. View Payments");
+        System.out.println("0. Back");
+        System.out.print("Enter Choice : ");
+
+        int paymentChoice = sc.nextInt();
+        sc.nextLine();
+
+        switch (paymentChoice) {
+
+            case 1:
+                paymentUI.recordPayment();
+                break;
+
+            case 2:
+                paymentUI.viewPayments();
+                break;
+
+            case 0:
+                break;
+
+            default:
+                System.out.println("Invalid Choice!");
+        }
+
+        if (paymentChoice == 0)
             break;
     }
 

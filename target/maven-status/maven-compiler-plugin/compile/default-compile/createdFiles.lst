@@ -6,11 +6,14 @@ App.class
 dao\InvoiceDAO.class
 model\Invoice.class
 util\DBConnection.class
+model\Payment.class
 ui\ProductUI.class
 dao\VendorDAO.class
 ui\InvoiceUI.class
 model\Vendor.class
 model\Product.class
+dao\PaymentDAO.class
+ui\PaymentUI.class
 dao\UserDAO.class
 services\LoginService.class
 ui\LoginUI.class
