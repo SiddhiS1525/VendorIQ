@@ -1,3 +1,4 @@
+ui\DashboardUI.class
 ui\VendorUI.class
 dao\PurchaseOrderDAO.class
 ui\PurchaseOrderUI.class
@@ -5,6 +6,7 @@ model\PurchaseOrder.class
 App.class
 dao\InvoiceDAO.class
 model\Invoice.class
+dao\DashboardDAO.class
 util\DBConnection.class
 model\Payment.class
 ui\ProductUI.class

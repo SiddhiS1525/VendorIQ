@@ -1,8 +1,9 @@
+import ui.VendorUI;
 import ui.ProductUI;
 import ui.PurchaseOrderUI;
-import ui.VendorUI;
 import ui.InvoiceUI;
 import ui.PaymentUI;
+import ui.DashboardUI;
 
 import java.util.Scanner;
 
@@ -17,7 +18,7 @@ public class App {
         PurchaseOrderUI purchaseOrderUI = new PurchaseOrderUI();
         InvoiceUI invoiceUI = new InvoiceUI();
         PaymentUI paymentUI = new PaymentUI();
-
+        DashboardUI dashboardUI = new DashboardUI();
 
         while (true) {
 
@@ -27,6 +28,7 @@ public class App {
             System.out.println("3. Purchase Order Module");
             System.out.println("4. Invoice Module");
             System.out.println("5. Payment Module");
+            System.out.println("6. Dashboard");
             System.out.println("0. Exit");
             System.out.print("Enter Choice : ");
 
@@ -36,6 +38,7 @@ public class App {
             switch (choice) {
 
                 // ================= Vendor Module =================
+
                 case 1:
 
                     while (true) {
@@ -73,6 +76,7 @@ public class App {
                     break;
 
                 // ================= Product Module =================
+
                 case 2:
 
                     while (true) {
@@ -140,6 +144,7 @@ public class App {
                     break;
 
                 // ================= Purchase Order Module =================
+
                 case 3:
 
                     while (true) {
@@ -180,84 +185,99 @@ public class App {
                     }
 
                     break;
+                                    // ================= Invoice Module =================
 
-                // ================= Exit =================
                 case 4:
 
-    while (true) {
+                    while (true) {
 
-        System.out.println("\n====== Invoice Module ======");
-        System.out.println("1. Create Invoice");
-        System.out.println("2. View All Invoices");
-        System.out.println("0. Back");
-        System.out.print("Enter Choice : ");
+                        System.out.println("\n====== Invoice Module ======");
+                        System.out.println("1. Create Invoice");
+                        System.out.println("2. View All Invoices");
+                        System.out.println("0. Back");
+                        System.out.print("Enter Choice : ");
 
-        int invoiceChoice = sc.nextInt();
-        sc.nextLine();
+                        int invoiceChoice = sc.nextInt();
+                        sc.nextLine();
 
-        switch (invoiceChoice) {
+                        switch (invoiceChoice) {
 
-            case 1:
-                invoiceUI.createInvoice();
-                break;
+                            case 1:
+                                invoiceUI.createInvoice();
+                                break;
 
-            case 2:
-                invoiceUI.viewInvoices();
-                break;
+                            case 2:
+                                invoiceUI.viewInvoices();
+                                break;
 
-            case 0:
-                break;
+                            case 0:
+                                break;
 
-            default:
-                System.out.println("Invalid Choice!");
-        }
+                            default:
+                                System.out.println("Invalid Choice!");
+                        }
 
-        if (invoiceChoice == 0)
-            break;
-    }
+                        if (invoiceChoice == 0)
+                            break;
+                    }
 
-    break;
+                    break;
 
-    case 5:
+                // ================= Payment Module =================
 
-    while (true) {
+                case 5:
 
-        System.out.println("\n====== Payment Module ======");
-        System.out.println("1. Record Payment");
-        System.out.println("2. View Payments");
-        System.out.println("0. Back");
-        System.out.print("Enter Choice : ");
+                    while (true) {
 
-        int paymentChoice = sc.nextInt();
-        sc.nextLine();
+                        System.out.println("\n====== Payment Module ======");
+                        System.out.println("1. Record Payment");
+                        System.out.println("2. View Payments");
+                        System.out.println("0. Back");
+                        System.out.print("Enter Choice : ");
 
-        switch (paymentChoice) {
+                        int paymentChoice = sc.nextInt();
+                        sc.nextLine();
 
-            case 1:
-                paymentUI.recordPayment();
-                break;
+                        switch (paymentChoice) {
 
-            case 2:
-                paymentUI.viewPayments();
-                break;
+                            case 1:
+                                paymentUI.recordPayment();
+                                break;
 
-            case 0:
-                break;
+                            case 2:
+                                paymentUI.viewPayments();
+                                break;
 
-            default:
-                System.out.println("Invalid Choice!");
-        }
+                            case 0:
+                                break;
 
-        if (paymentChoice == 0)
-            break;
-    }
+                            default:
+                                System.out.println("Invalid Choice!");
+                        }
 
-    break;
+                        if (paymentChoice == 0)
+                            break;
+                    }
+
+                    break;
+
+                // ================= Dashboard =================
+
+                case 6:
+
+                    dashboardUI.showDashboard();
+                    break;
+
+                // ================= Exit =================
+
                 case 0:
+
                     System.out.println("\nThank You for using VendorIQ!");
                     System.exit(0);
+                    break;
 
                 default:
+
                     System.out.println("Invalid Choice!");
             }
         }
