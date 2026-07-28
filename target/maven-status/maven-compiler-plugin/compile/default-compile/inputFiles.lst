@@ -4,6 +4,7 @@ C:\Users\suryawanshi siddhi\OneDrive\Desktop\VenderIQ\VenderIQ\src\main\java\dao
 C:\Users\suryawanshi siddhi\OneDrive\Desktop\VenderIQ\VenderIQ\src\main\java\dao\PaymentDAO.java
 C:\Users\suryawanshi siddhi\OneDrive\Desktop\VenderIQ\VenderIQ\src\main\java\dao\ProductDAO.java
 C:\Users\suryawanshi siddhi\OneDrive\Desktop\VenderIQ\VenderIQ\src\main\java\dao\PurchaseOrderDAO.java
+C:\Users\suryawanshi siddhi\OneDrive\Desktop\VenderIQ\VenderIQ\src\main\java\dao\ReportDAO.java
 C:\Users\suryawanshi siddhi\OneDrive\Desktop\VenderIQ\VenderIQ\src\main\java\dao\UserDAO.java
 C:\Users\suryawanshi siddhi\OneDrive\Desktop\VenderIQ\VenderIQ\src\main\java\dao\VendorDAO.java
 C:\Users\suryawanshi siddhi\OneDrive\Desktop\VenderIQ\VenderIQ\src\main\java\model\Invoice.java
@@ -19,5 +20,6 @@ C:\Users\suryawanshi siddhi\OneDrive\Desktop\VenderIQ\VenderIQ\src\main\java\ui\
 C:\Users\suryawanshi siddhi\OneDrive\Desktop\VenderIQ\VenderIQ\src\main\java\ui\PaymentUI.java
 C:\Users\suryawanshi siddhi\OneDrive\Desktop\VenderIQ\VenderIQ\src\main\java\ui\ProductUI.java
 C:\Users\suryawanshi siddhi\OneDrive\Desktop\VenderIQ\VenderIQ\src\main\java\ui\PurchaseOrderUI.java
+C:\Users\suryawanshi siddhi\OneDrive\Desktop\VenderIQ\VenderIQ\src\main\java\ui\ReportUI.java
 C:\Users\suryawanshi siddhi\OneDrive\Desktop\VenderIQ\VenderIQ\src\main\java\ui\VendorUI.java
 C:\Users\suryawanshi siddhi\OneDrive\Desktop\VenderIQ\VenderIQ\src\main\java\util\DBConnection.java
