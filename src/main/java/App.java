@@ -5,6 +5,7 @@ import ui.InvoiceUI;
 import ui.PaymentUI;
 import ui.DashboardUI;
 import ui.ReportUI;
+import ui.AnalyticsUI;
 
 import java.util.Scanner;
 
@@ -21,6 +22,7 @@ public class App {
         PaymentUI paymentUI = new PaymentUI();
         DashboardUI dashboardUI = new DashboardUI();
         ReportUI reportUI = new ReportUI();
+        AnalyticsUI analyticsUI = new AnalyticsUI();
 
         while (true) {
 
@@ -32,6 +34,7 @@ public class App {
             System.out.println("5. Payment Module");
             System.out.println("6. Dashboard");
             System.out.println("7. Reports");
+            System.out.println("8. Analytics");
             System.out.println("0. Exit");
             System.out.print("Enter Choice : ");
 
@@ -275,6 +278,12 @@ public class App {
                     case 7:
 
     reportUI.showReportsMenu();
+
+    break;
+
+    case 8:
+
+    analyticsUI.showAnalyticsMenu();
 
     break;
 

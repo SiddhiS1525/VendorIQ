@@ -2,10 +2,12 @@ ui\VendorUI.class
 dao\PurchaseOrderDAO.class
 App.class
 dao\InvoiceDAO.class
+ui\AnalyticsUI.class
 ui\ReportUI.class
 model\Product.class
 dao\UserDAO.class
 model\User.class
+dao\AnalyticsDAO.class
 ui\DashboardUI.class
 ui\PurchaseOrderUI.class
 model\PurchaseOrder.class
