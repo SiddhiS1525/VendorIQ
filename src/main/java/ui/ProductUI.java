@@ -18,18 +18,46 @@ public class ProductUI {
 
         System.out.println("\n===== Add Product =====");
 
+        // Product Name
         System.out.print("Product Name : ");
-        product.setProductName(sc.nextLine());
+        String productName = sc.nextLine();
 
+        if (productName.trim().isEmpty()) {
+            System.out.println("❌ Product Name cannot be empty!");
+            return;
+        }
+        product.setProductName(productName);
+
+        // Category
         System.out.print("Category : ");
-        product.setCategory(sc.nextLine());
+        String category = sc.nextLine();
 
+        if (category.trim().isEmpty()) {
+            System.out.println("❌ Category cannot be empty!");
+            return;
+        }
+        product.setCategory(category);
+
+        // Unit Price
         System.out.print("Unit Price : ");
-        product.setPrice(sc.nextDouble());
+        double price = sc.nextDouble();
 
+        if (price < 0) {
+            System.out.println("❌ Price cannot be negative!");
+            return;
+        }
+        product.setPrice(price);
+
+        // Stock Quantity
         System.out.print("Stock Quantity : ");
-        product.setStockQuantity(sc.nextInt());
+        int stock = sc.nextInt();
         sc.nextLine();
+
+        if (stock < 0) {
+            System.out.println("❌ Stock cannot be negative!");
+            return;
+        }
+        product.setStockQuantity(stock);
 
         if (productDAO.addProduct(product)) {
             System.out.println("\n✅ Product Added Successfully!");
@@ -62,18 +90,46 @@ public class ProductUI {
         product.setProductId(sc.nextInt());
         sc.nextLine();
 
+        // Product Name
         System.out.print("New Product Name : ");
-        product.setProductName(sc.nextLine());
+        String productName = sc.nextLine();
 
+        if (productName.trim().isEmpty()) {
+            System.out.println("❌ Product Name cannot be empty!");
+            return;
+        }
+        product.setProductName(productName);
+
+        // Category
         System.out.print("New Category : ");
-        product.setCategory(sc.nextLine());
+        String category = sc.nextLine();
 
+        if (category.trim().isEmpty()) {
+            System.out.println("❌ Category cannot be empty!");
+            return;
+        }
+        product.setCategory(category);
+
+        // Price
         System.out.print("New Unit Price : ");
-        product.setPrice(sc.nextDouble());
+        double price = sc.nextDouble();
 
+        if (price < 0) {
+            System.out.println("❌ Price cannot be negative!");
+            return;
+        }
+        product.setPrice(price);
+
+        // Stock
         System.out.print("New Stock Quantity : ");
-        product.setStockQuantity(sc.nextInt());
+        int stock = sc.nextInt();
         sc.nextLine();
+
+        if (stock < 0) {
+            System.out.println("❌ Stock cannot be negative!");
+            return;
+        }
+        product.setStockQuantity(stock);
 
         if (productDAO.updateProduct(product)) {
             System.out.println("\n✅ Product Updated Successfully!");
@@ -106,6 +162,11 @@ public class ProductUI {
         int quantity = sc.nextInt();
         sc.nextLine();
 
+        if (quantity <= 0) {
+            System.out.println("❌ Quantity must be greater than 0!");
+            return;
+        }
+
         if (productDAO.increaseStock(productId, quantity)) {
             System.out.println("\n✅ Stock Increased Successfully!");
         } else {
@@ -122,6 +183,11 @@ public class ProductUI {
         System.out.print("Enter Quantity : ");
         int quantity = sc.nextInt();
         sc.nextLine();
+
+        if (quantity <= 0) {
+            System.out.println("❌ Quantity must be greater than 0!");
+            return;
+        }
 
         if (productDAO.decreaseStock(productId, quantity)) {
             System.out.println("\n✅ Stock Decreased Successfully!");

@@ -18,30 +18,80 @@ public class VendorUI {
 
         System.out.println("\n===== Add Vendor =====");
 
+        // Vendor Name
         System.out.print("Vendor Name : ");
-        vendor.setVendorName(sc.nextLine());
+        String vendorName = sc.nextLine();
 
+        if (vendorName.trim().isEmpty()) {
+            System.out.println("❌ Vendor Name cannot be empty!");
+            return;
+        }
+        vendor.setVendorName(vendorName);
+
+        // Company Name
         System.out.print("Company Name : ");
-        vendor.setCompanyName(sc.nextLine());
+        String companyName = sc.nextLine();
 
+        if (companyName.trim().isEmpty()) {
+            System.out.println("❌ Company Name cannot be empty!");
+            return;
+        }
+        vendor.setCompanyName(companyName);
+
+        // Email
         System.out.print("Email : ");
-        vendor.setEmail(sc.nextLine());
+        String email = sc.nextLine();
 
+        if (!email.matches("^[A-Za-z0-9+_.-]+@(.+)$")) {
+            System.out.println("❌ Invalid Email Address!");
+            return;
+        }
+        vendor.setEmail(email);
+
+        // Phone
         System.out.print("Phone : ");
-        vendor.setPhone(sc.nextLine());
+        String phone = sc.nextLine();
 
+        if (!phone.matches("\\d{10}")) {
+            System.out.println("❌ Phone Number must contain exactly 10 digits!");
+            return;
+        }
+        vendor.setPhone(phone);
+
+        // Address
         System.out.print("Address : ");
         vendor.setAddress(sc.nextLine());
 
+        // Category
         System.out.print("Category : ");
-        vendor.setCategory(sc.nextLine());
+        String category = sc.nextLine();
 
+        if (category.trim().isEmpty()) {
+            System.out.println("❌ Category cannot be empty!");
+            return;
+        }
+        vendor.setCategory(category);
+
+        // Rating
         System.out.print("Rating : ");
-        vendor.setRating(sc.nextDouble());
+        double rating = sc.nextDouble();
         sc.nextLine();
 
+        if (rating < 0 || rating > 5) {
+            System.out.println("❌ Rating must be between 0 and 5!");
+            return;
+        }
+        vendor.setRating(rating);
+
+        // Status
         System.out.print("Status : ");
-        vendor.setStatus(sc.nextLine());
+        String status = sc.nextLine();
+
+        if (status.trim().isEmpty()) {
+            System.out.println("❌ Status cannot be empty!");
+            return;
+        }
+        vendor.setStatus(status);
 
         boolean result = vendorDAO.addVendor(vendor);
 
@@ -54,8 +104,6 @@ public class VendorUI {
 
     // View All Vendors
     public void viewAllVendors() {
-
         vendorDAO.viewAllVendors();
-
     }
 }

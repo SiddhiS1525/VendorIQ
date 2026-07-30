@@ -1,18 +1,46 @@
-## Getting Started
+# VendorIQ - Vendor Management System
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## 📌 Overview
+VendorIQ is a Java-based Vendor Management System developed using Core Java, JDBC, MySQL, and Maven. It helps manage vendors, products, purchase orders, invoices, and payments through a console-based application.
 
-## Folder Structure
+## 🚀 Features
+- Vendor Management
+- Product Management
+- Purchase Order Management
+- Invoice Management
+- Payment Management
+- Dashboard
+- Reports
+- Analytics
 
-The workspace contains two folders by default, where:
+## 🛠 Tech Stack
+- Core Java
+- JDBC
+- MySQL
+- Maven
+- Git & GitHub
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## 📂 Modules
+- Vendor Module
+- Product Module
+- Purchase Order Module
+- Invoice Module
+- Payment Module
+- Dashboard
+- Reports
+- Analytics
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## ▶️ Run Project
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+1. Clone the repository
+2. Configure MySQL database
+3. Run schema.sql
+4. Execute:
 
-## Dependency Management
+mvn clean compile
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+mvn exec:java "-Dexec.mainClass=App"
+
+## 👩‍💻 Developed By
+
+Siddhi Suryawanshi
